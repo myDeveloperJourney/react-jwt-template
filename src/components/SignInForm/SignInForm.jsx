@@ -1,8 +1,6 @@
 import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router';
-
-// TODO: define import { signIn } from '../../services/authService';
-
+import { signIn } from '../../services/authService';
 import { UserContext } from '../../contexts/UserContext';
 
 const SignInForm = () => {
@@ -25,8 +23,8 @@ const SignInForm = () => {
     const handleSubmit = async (evt) => {
         evt.preventDefault();
         try {
-            // TODO const signedInUser = await signIn(formData);
-            // TODO setUser(signedInUser);
+            const signedInUser = await signIn(formData);
+            setUser(signedInUser);
             navigate('/');
         } catch (error) {
             setMessage(error.message);
