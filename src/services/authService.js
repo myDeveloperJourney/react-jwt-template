@@ -24,6 +24,7 @@ const signUp = async (formData) => {
         throw new Error('Invalid response from server');
     } catch (error) {
         console.error(error);
+        throw new Error(error);
     }
 };
 
@@ -51,6 +52,7 @@ const signIn = async (formData) => {
         throw new Error('Invalid response from server');
     } catch (error) {
         console.error(error);
+        throw new Error(error)
     }
 };
 
