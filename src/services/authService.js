@@ -29,4 +29,4 @@ const signUp = async (formData) => {
 
 export {
     signUp
-}
+};
